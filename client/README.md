@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Dynamic Dashboard with Authentication and API Integration
 
-## Getting Started
+This project is a fully functional, dynamic dashboard built with Next.js (App Router), Material UI, and React. It includes user authentication, API data fetching, filtering, pagination, and a responsive layout with a light/dark theme toggle.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Authentication Flow**:
+  - Login page with email and password validation.
+  - Mock JWT token stored in `localStorage` for authentication.
+  - Protected dashboard route (redirects to login if not authenticated).
+  - Logout functionality.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Dashboard Page**:
+  - Responsive layout with a header, sidebar, and main content area.
+  - Displays data fetched from the [JSONPlaceholder API](https://jsonplaceholder.typicode.com/posts) in a table.
+  - Search and filter functionality (by title or ID).
+  - Pagination (5 posts per page).
+  - Interactive table with clickable rows to view post details in a dialog.
+  - Refresh button to reload data.
+  - Loading spinner while fetching data.
+  - Error handling for failed API calls.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Styling and Interactivity**:
+  - Built with Material UI for a polished and responsive UI.
+  - Light/dark theme toggle with persistence in `localStorage`.
+  - Animations (e.g., fade-in for the table, zoom on search bar focus).
+  - Interactive login page with real-time validation, show password toggle, and loading state.
+  - Enhanced search bar with clear button and search icon.
+  - Hover effects on table rows and buttons.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Tech Stack**:
+  - **Framework**: Next.js (App Router)
+  - **Styling**: Material UI
+  - **Authentication**: Mock JWT Token
+  - **API**: JSONPlaceholder
+  - **Fonts**: Geist and Geist Mono (via `next/font/google`)
+  - **Icons**: React Icons and Material UI Icons
 
-## Learn More
+## Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+- **Node.js**: Version 14.x or later (includes npm). Download from [nodejs.org](https://nodejs.org/).
+- **Git**: For version control (optional but recommended). Install from [git-scm.com](https://git-scm.com/).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Setup Instructions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the Repository** (if applicable):
+   ```bash
+   git clone <repository-url>
+   cd client
